@@ -1,0 +1,7 @@
+Developer_ID,Developer_Name,Role,Primary_Skills,Data_Source
+DEV01,Aarav Mehta,Backend Engineer,"Java, Spring Boot, PostgreSQL",synthetic
+DEV02,Priya Nair,Backend Engineer,"Java, Spring Boot, Spring Security",synthetic
+DEV03,Rohan Shah,Frontend Engineer,"React, TypeScript, UI",synthetic
+DEV04,Ananya Rao,Frontend Engineer,"React, TypeScript, API integration",synthetic
+DEV05,Kavya Iyer,QA Engineer,"JUnit, Mockito, API testing, regression",synthetic
+DEV06,Vikram Das,DevOps Engineer,"GitHub Actions, Docker, Kubernetes, AWS EKS",synthetic

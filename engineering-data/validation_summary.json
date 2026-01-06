@@ -1,0 +1,21 @@
+{
+  "jira_work_items": 18,
+  "developers": 6,
+  "sprints": 12,
+  "branches": 67,
+  "commits": 378,
+  "pull_requests": 60,
+  "merged_prs": 55,
+  "rejected_prs": 5,
+  "ci_runs": 90,
+  "deployments": 30,
+  "releases": 5,
+  "commit_first": "2026-01-06 12:00:00",
+  "commit_last": "2026-06-18 07:53:00",
+  "deploy_first": "2026-01-16 14:00:00",
+  "deploy_last": "2026-06-24 16:20:00",
+  "ci_conclusions": {"failure": 34, "success": 55, "cancelled": 1},
+  "deployment_statuses": {"Succeeded": 23, "Failed": 6, "Rolled Back": 1},
+  "prod_deployments": 12,
+  "data_source_values": ["synthetic"]
+}

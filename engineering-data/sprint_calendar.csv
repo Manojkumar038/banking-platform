@@ -1,0 +1,13 @@
+Sprint_ID,Sprint_Name,Start_Date,End_Date,Duration_Calendar_Days,Data_Source
+S01,Banking Platform Sprint 01,2026-01-05,2026-01-16,14,synthetic
+S02,Banking Platform Sprint 02,2026-01-19,2026-01-30,14,synthetic
+S03,Banking Platform Sprint 03,2026-02-02,2026-02-13,14,synthetic
+S04,Banking Platform Sprint 04,2026-02-16,2026-02-27,14,synthetic
+S05,Banking Platform Sprint 05,2026-03-02,2026-03-13,14,synthetic
+S06,Banking Platform Sprint 06,2026-03-16,2026-03-27,14,synthetic
+S07,Banking Platform Sprint 07,2026-03-30,2026-04-10,14,synthetic
+S08,Banking Platform Sprint 08,2026-04-13,2026-04-24,14,synthetic
+S09,Banking Platform Sprint 09,2026-04-27,2026-05-08,14,synthetic
+S10,Banking Platform Sprint 10,2026-05-11,2026-05-22,14,synthetic
+S11,Banking Platform Sprint 11,2026-05-25,2026-06-05,14,synthetic
+S12,Banking Platform Sprint 12,2026-06-08,2026-06-19,14,synthetic

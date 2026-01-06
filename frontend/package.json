@@ -1,0 +1,9 @@
+{
+  "name": "banking-platform-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Synthetic digital banking frontend demo",
+  "scripts": {
+    "test": "node --test"
+  }
+}
