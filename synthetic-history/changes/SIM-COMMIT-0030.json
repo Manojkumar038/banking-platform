@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0030",
+  "simulated_commit_date": "2026-01-12 23:28:00",
+  "developer_id": "DEV01",
+  "developer_name": "Aarav Mehta",
+  "feature_id": "F1",
+  "user_story_id": "US102",
+  "simulated_branch_name": "story/us102-pr-005",
+  "simulated_pull_request_id": "SIM-PR-005",
+  "change_summary": "WIP: [US102] Implement repository mapping for sign in using secure credentials",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
