@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0033",
+  "simulated_commit_date": "2026-01-13 20:28:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F1",
+  "user_story_id": "US102",
+  "simulated_branch_name": "story/us102-pr-005",
+  "simulated_pull_request_id": "SIM-PR-005",
+  "change_summary": "[US102] Improve service logic for sign in using secure credentials",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
