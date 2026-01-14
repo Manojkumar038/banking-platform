@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0012",
+  "simulated_commit_date": "2026-01-14 19:07:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F1",
+  "user_story_id": "US101",
+  "simulated_branch_name": "story/us101-pr-002",
+  "simulated_pull_request_id": "SIM-PR-002",
+  "change_summary": "[US101] Document request validation for register using my mobile number and email",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
