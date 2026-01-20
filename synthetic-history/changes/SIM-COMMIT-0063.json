@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0063",
+  "simulated_commit_date": "2026-01-20 06:56:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F1",
+  "user_story_id": "US103",
+  "simulated_branch_name": "story/us103-pr-009",
+  "simulated_pull_request_id": "SIM-PR-009",
+  "change_summary": "[US103] Harden error handling for reset my password using OTP verification",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
