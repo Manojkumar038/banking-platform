@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0106",
+  "simulated_commit_date": "2026-02-08 17:45:00",
+  "developer_id": "DEV01",
+  "developer_name": "Aarav Mehta",
+  "feature_id": "F1",
+  "user_story_id": "US105",
+  "simulated_branch_name": "story/us105-pr-016",
+  "simulated_pull_request_id": "SIM-PR-016",
+  "change_summary": "[US105] Document DTO mapping for As a customer, I am automatically logged out after ses",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
