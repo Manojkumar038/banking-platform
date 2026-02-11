@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0092",
+  "simulated_commit_date": "2026-02-11 19:31:00",
+  "developer_id": "DEV06",
+  "developer_name": "Vikram Das",
+  "feature_id": "F1",
+  "user_story_id": "US104",
+  "simulated_branch_name": "story/us104-pr-014",
+  "simulated_pull_request_id": "SIM-PR-014",
+  "change_summary": "[US104] Refactor repository mapping for enable multi-factor authentication",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
