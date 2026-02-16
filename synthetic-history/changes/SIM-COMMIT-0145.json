@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0145",
+  "simulated_commit_date": "2026-02-16 19:27:00",
+  "developer_id": "DEV03",
+  "developer_name": "Rohan Shah",
+  "feature_id": "F2",
+  "user_story_id": "US107",
+  "simulated_branch_name": "story/us107-pr-022",
+  "simulated_pull_request_id": "SIM-PR-022",
+  "change_summary": "[US107] Cover error handling for view recent account transactions",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
