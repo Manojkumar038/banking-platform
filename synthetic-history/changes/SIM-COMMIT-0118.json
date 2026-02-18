@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0118",
+  "simulated_commit_date": "2026-02-18 23:52:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F1",
+  "user_story_id": "US105",
+  "simulated_branch_name": "story/us105-pr-017",
+  "simulated_pull_request_id": "SIM-PR-017",
+  "change_summary": "[US105] Validate retry handling for As a customer, I am automatically logged out after ses",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
