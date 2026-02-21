@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0136",
+  "simulated_commit_date": "2026-02-21 14:25:00",
+  "developer_id": "DEV03",
+  "developer_name": "Rohan Shah",
+  "feature_id": "F2",
+  "user_story_id": "US106",
+  "simulated_branch_name": "story/us106-pr-020",
+  "simulated_pull_request_id": "SIM-PR-020",
+  "change_summary": "[US106] Harden repository mapping for view account balances and masked account details",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
