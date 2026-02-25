@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0151",
+  "simulated_commit_date": "2026-02-25 14:34:00",
+  "developer_id": "DEV02",
+  "developer_name": "Priya Nair",
+  "feature_id": "F2",
+  "user_story_id": "US107",
+  "simulated_branch_name": "story/us107-pr-023",
+  "simulated_pull_request_id": "SIM-PR-023",
+  "change_summary": "[US107] Implement service logic for view recent account transactions",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
