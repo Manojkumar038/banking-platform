@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0166",
+  "simulated_commit_date": "2026-02-27 14:00:00",
+  "developer_id": "DEV03",
+  "developer_name": "Rohan Shah",
+  "feature_id": "F2",
+  "user_story_id": "US108",
+  "simulated_branch_name": "story/us108-pr-025",
+  "simulated_pull_request_id": "SIM-PR-025",
+  "change_summary": "[US108] Harden repository mapping for update my contact information",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
