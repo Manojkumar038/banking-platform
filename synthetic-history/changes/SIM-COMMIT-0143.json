@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0143",
+  "simulated_commit_date": "2026-03-08 01:56:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F2",
+  "user_story_id": "US106",
+  "simulated_branch_name": "story/us106-pr-021",
+  "simulated_pull_request_id": "SIM-PR-021",
+  "change_summary": "[US106] Improve service logic for view account balances and masked account details",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
