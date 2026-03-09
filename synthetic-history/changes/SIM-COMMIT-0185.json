@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0185",
+  "simulated_commit_date": "2026-03-09 22:45:00",
+  "developer_id": "DEV03",
+  "developer_name": "Rohan Shah",
+  "feature_id": "F2",
+  "user_story_id": "US109",
+  "simulated_branch_name": "story/us109-pr-028",
+  "simulated_pull_request_id": "SIM-PR-028",
+  "change_summary": "[US109] Harden API contract for add and verify a beneficiary",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
