@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0227",
+  "simulated_commit_date": "2026-03-26 04:34:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F3",
+  "user_story_id": "US111",
+  "simulated_branch_name": "story/us111-pr-035",
+  "simulated_pull_request_id": "SIM-PR-035",
+  "change_summary": "[US111] Implement error handling for transfer funds using UPI",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
