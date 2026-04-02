@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0234",
+  "simulated_commit_date": "2026-04-02 07:05:00",
+  "developer_id": "DEV02",
+  "developer_name": "Priya Nair",
+  "feature_id": "F3",
+  "user_story_id": "US111",
+  "simulated_branch_name": "story/us111-pr-036",
+  "simulated_pull_request_id": "SIM-PR-036",
+  "change_summary": "[US111] Harden unit tests for transfer funds using UPI",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
