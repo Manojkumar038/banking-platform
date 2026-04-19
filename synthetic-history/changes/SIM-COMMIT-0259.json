@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0259",
+  "simulated_commit_date": "2026-04-19 12:40:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F3",
+  "user_story_id": "US112",
+  "simulated_branch_name": "story/us112-pr-041",
+  "simulated_pull_request_id": "SIM-PR-041",
+  "change_summary": "[US112] Harden configuration fixtures for transfer funds using IMPS",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
