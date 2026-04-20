@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0276",
+  "simulated_commit_date": "2026-04-20 12:54:00",
+  "developer_id": "DEV02",
+  "developer_name": "Priya Nair",
+  "feature_id": "F3",
+  "user_story_id": "US113",
+  "simulated_branch_name": "story/us113-pr-043",
+  "simulated_pull_request_id": "SIM-PR-043",
+  "change_summary": "[US113] Implement DTO mapping for initiate NEFT transfers",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
