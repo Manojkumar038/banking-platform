@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0290",
+  "simulated_commit_date": "2026-04-27 03:39:00",
+  "developer_id": "DEV06",
+  "developer_name": "Vikram Das",
+  "feature_id": "F3",
+  "user_story_id": "US114",
+  "simulated_branch_name": "story/us114-pr-046",
+  "simulated_pull_request_id": "SIM-PR-046",
+  "change_summary": "[US114] Implement repository mapping for initiate RTGS transfers",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
