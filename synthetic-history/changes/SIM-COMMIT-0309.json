@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0309",
+  "simulated_commit_date": "2026-05-05 05:24:00",
+  "developer_id": "DEV02",
+  "developer_name": "Priya Nair",
+  "feature_id": "F3",
+  "user_story_id": "US115",
+  "simulated_branch_name": "story/us115-pr-049",
+  "simulated_pull_request_id": "SIM-PR-049",
+  "change_summary": "[US115] Implement API contract for view transfer status and transaction history",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
