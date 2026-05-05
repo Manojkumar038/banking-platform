@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0310",
+  "simulated_commit_date": "2026-05-05 13:48:00",
+  "developer_id": "DEV04",
+  "developer_name": "Ananya Rao",
+  "feature_id": "F3",
+  "user_story_id": "US115",
+  "simulated_branch_name": "story/us115-pr-049",
+  "simulated_pull_request_id": "SIM-PR-049",
+  "change_summary": "[US115] Validate DTO mapping for view transfer status and transaction history",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
