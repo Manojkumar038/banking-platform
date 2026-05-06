@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0298",
+  "simulated_commit_date": "2026-05-06 15:34:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F3",
+  "user_story_id": "US114",
+  "simulated_branch_name": "story/us114-pr-047",
+  "simulated_pull_request_id": "SIM-PR-047",
+  "change_summary": "[US114] Implement unit tests for initiate RTGS transfers",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
