@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0344",
+  "simulated_commit_date": "2026-05-20 22:42:00",
+  "developer_id": "DEV06",
+  "developer_name": "Vikram Das",
+  "feature_id": "F3",
+  "user_story_id": "US117",
+  "simulated_branch_name": "story/us117-pr-055",
+  "simulated_pull_request_id": "SIM-PR-055",
+  "change_summary": "WIP: [US117] Cover DTO mapping for download a transaction receipt",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
