@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0348",
+  "simulated_commit_date": "2026-05-22 08:18:00",
+  "developer_id": "DEV02",
+  "developer_name": "Priya Nair",
+  "feature_id": "F3",
+  "user_story_id": "US117",
+  "simulated_branch_name": "story/us117-pr-055",
+  "simulated_pull_request_id": "SIM-PR-055",
+  "change_summary": "[US117] Validate retry handling for download a transaction receipt",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
