@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0336",
+  "simulated_commit_date": "2026-05-23 10:04:00",
+  "developer_id": "DEV03",
+  "developer_name": "Rohan Shah",
+  "feature_id": "F3",
+  "user_story_id": "US116",
+  "simulated_branch_name": "story/us116-pr-053",
+  "simulated_pull_request_id": "SIM-PR-053",
+  "change_summary": "[US116] Implement DTO mapping for As a customer, I receive alerts for successful and fai",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
