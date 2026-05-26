@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0361",
+  "simulated_commit_date": "2026-05-26 15:39:00",
+  "developer_id": "DEV04",
+  "developer_name": "Ananya Rao",
+  "feature_id": "F3",
+  "user_story_id": "US118",
+  "simulated_branch_name": "story/us118-pr-058",
+  "simulated_pull_request_id": "SIM-PR-058",
+  "change_summary": "[US118] Implement service logic for see a clear message when a transfer fails",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
