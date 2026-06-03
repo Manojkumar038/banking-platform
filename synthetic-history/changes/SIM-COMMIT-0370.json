@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "commit_fixture_id": "SIM-COMMIT-0370",
+  "simulated_commit_date": "2026-06-03 19:58:00",
+  "developer_id": "DEV05",
+  "developer_name": "Kavya Iyer",
+  "feature_id": "F3",
+  "user_story_id": "US118",
+  "simulated_branch_name": "story/us118-pr-059",
+  "simulated_pull_request_id": "SIM-PR-059",
+  "change_summary": "[US118] Validate DTO mapping for see a clear message when a transfer fails",
+  "note": "Synthetic fixture file; not banking code or customer data."
+}
