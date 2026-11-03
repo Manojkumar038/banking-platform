@@ -1,0 +1,10 @@
+{
+  "record_type": "github_actions_trigger_marker",
+  "environment": "PROD",
+  "description": "PROD release-candidate verification triggered",
+  "trigger_reason": "Run the PROD promotion workflow and verify the release-candidate fixture set",
+  "source_branch": "promotion/prod",
+  "deployment_executed": false,
+  "data_source": "actual_github_trigger_metadata",
+  "created_for_workflow_history": true
+}
