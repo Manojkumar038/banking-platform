@@ -1,0 +1,10 @@
+{
+  "record_type": "github_actions_trigger_marker",
+  "environment": "DEV",
+  "description": "DEV integration smoke validation triggered",
+  "trigger_reason": "Validate the DEV promotion workflow and engineering fixture dataset",
+  "source_branch": "promotion/dev",
+  "deployment_executed": false,
+  "data_source": "actual_github_trigger_metadata",
+  "created_for_workflow_history": true
+}
