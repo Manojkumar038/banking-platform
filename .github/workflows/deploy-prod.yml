@@ -1,4 +1,5 @@
 name: Deploy to PROD
+run-name: "Deployment triggered to PROD | ${{ github.ref_name }} | ${{ github.sha }}"
 
 on:
   push:
@@ -14,36 +15,55 @@ concurrency:
 
 jobs:
   deploy:
-    name: PROD promotion pipeline (metadata-only)
+    name: Deployment triggered to PROD (validation-only)
     if: github.ref == 'refs/heads/promotion/prod' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: PROD
       url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout source for PROD
+        uses: actions/checkout@v4
+
+      - name: Set up Python validation runtime
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate engineering dataset
+
+      - name: Announce PROD deployment trigger
+        run: |
+          echo "Deployment triggered to PROD"
+          echo "Source branch: $GITHUB_REF_NAME"
+          echo "Source commit: $GITHUB_SHA"
+          echo "This is a metadata-only pipeline; no application runtime is deployed."
+
+      - name: Validate synthetic engineering dataset for PROD
         run: python engineering-data/load_dataset.py
-      - name: Record PROD workflow manifest
+
+      - name: Create PROD deployment execution manifest
         run: |
           mkdir -p dist
           python - <<'PY'
           import json, os
-          data = {
+          manifest = {
               "environment": "PROD",
+              "deployment_trigger": "Deployment triggered to PROD",
+              "source_ref": os.environ["GITHUB_REF"],
               "source_sha": os.environ["GITHUB_SHA"],
               "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+              "workflow_run_url": f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+              "deployment_mode": "github-environment-record-only",
               "application_runtime_deployed": False,
-              "deployment_mode": "metadata-only",
-              "runtime_target": None
+              "runtime_target": None,
+              "note": "No application hosting or AWS EKS target is configured. This run validates fixtures and records GitHub PROD environment activity only after any configured environment approval."
           }
-          with open("dist/prod-manifest.json", "w") as f:
-              json.dump(data, f, indent=2)
+          with open("dist/prod-manifest.json", "w", encoding="utf-8") as stream:
+              json.dump(manifest, stream, indent=2)
           PY
-      - uses: actions/upload-artifact@v4
+
+      - name: Upload PROD deployment execution record
+        uses: actions/upload-artifact@v4
         with:
-          name: prod-manifest-${{ github.run_id }}
+          name: prod-deployment-manifest-${{ github.run_id }}
           path: dist/prod-manifest.json
+          if-no-files-found: error

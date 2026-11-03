@@ -1,4 +1,5 @@
 name: Deploy to DEV
+run-name: "Deployment triggered to DEV | ${{ github.ref_name }} | ${{ github.sha }}"
 
 on:
   push:
@@ -14,25 +15,32 @@ concurrency:
 
 jobs:
   deploy:
-    name: DEV deployment pipeline (metadata-only)
+    name: Deployment triggered to DEV (validation-only)
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/promotion/dev'
     runs-on: ubuntu-latest
     environment:
       name: DEV
       url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
-      - name: Checkout source
+      - name: Checkout source for DEV
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python validation runtime
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Validate repository engineering fixtures
+      - name: Announce DEV deployment trigger
+        run: |
+          echo "Deployment triggered to DEV"
+          echo "Source branch: $GITHUB_REF_NAME"
+          echo "Source commit: $GITHUB_SHA"
+          echo "This is a metadata-only pipeline; no application runtime is deployed."
+
+      - name: Validate synthetic engineering dataset for DEV
         run: python engineering-data/load_dataset.py
 
-      - name: Create deployment manifest
+      - name: Create DEV deployment execution manifest
         env:
           TARGET_ENVIRONMENT: DEV
         run: |
@@ -41,6 +49,7 @@ jobs:
           import json, os
           manifest = {
               "environment": os.environ["TARGET_ENVIRONMENT"],
+              "deployment_trigger": "Deployment triggered to DEV",
               "source_ref": os.environ["GITHUB_REF"],
               "source_sha": os.environ["GITHUB_SHA"],
               "workflow_run_id": os.environ["GITHUB_RUN_ID"],
@@ -48,13 +57,13 @@ jobs:
               "deployment_mode": "github-environment-record-only",
               "application_runtime_deployed": False,
               "runtime_target": None,
-              "note": "No hosting or AWS EKS target is configured yet. This run validates fixtures and records the GitHub Environment workflow execution only."
+              "note": "No hosting or AWS EKS target is configured. This run validates fixtures and records GitHub DEV environment activity only."
           }
           with open("dist/deployment-manifest.json", "w", encoding="utf-8") as stream:
               json.dump(manifest, stream, indent=2)
           PY
 
-      - name: Upload deployment manifest
+      - name: Upload DEV deployment execution record
         uses: actions/upload-artifact@v4
         with:
           name: dev-deployment-manifest-${{ github.run_id }}

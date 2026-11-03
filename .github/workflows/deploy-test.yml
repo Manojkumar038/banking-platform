@@ -1,4 +1,5 @@
 name: Deploy to TEST
+run-name: "Deployment triggered to TEST | ${{ github.ref_name }} | ${{ github.sha }}"
 
 on:
   push:
@@ -14,36 +15,55 @@ concurrency:
 
 jobs:
   deploy:
-    name: TEST promotion pipeline (metadata-only)
+    name: Deployment triggered to TEST (validation-only)
     if: github.ref == 'refs/heads/promotion/test' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: TEST
       url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout source for TEST
+        uses: actions/checkout@v4
+
+      - name: Set up Python validation runtime
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate engineering dataset
+
+      - name: Announce TEST deployment trigger
+        run: |
+          echo "Deployment triggered to TEST"
+          echo "Source branch: $GITHUB_REF_NAME"
+          echo "Source commit: $GITHUB_SHA"
+          echo "This is a metadata-only pipeline; no application runtime is deployed."
+
+      - name: Validate synthetic engineering dataset for TEST
         run: python engineering-data/load_dataset.py
-      - name: Record TEST workflow manifest
+
+      - name: Create TEST deployment execution manifest
         run: |
           mkdir -p dist
           python - <<'PY'
           import json, os
-          data = {
+          manifest = {
               "environment": "TEST",
+              "deployment_trigger": "Deployment triggered to TEST",
+              "source_ref": os.environ["GITHUB_REF"],
               "source_sha": os.environ["GITHUB_SHA"],
               "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+              "workflow_run_url": f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+              "deployment_mode": "github-environment-record-only",
               "application_runtime_deployed": False,
-              "deployment_mode": "metadata-only",
-              "runtime_target": None
+              "runtime_target": None,
+              "note": "No application hosting or AWS EKS target is configured. This run validates fixtures and records GitHub TEST environment activity only."
           }
-          with open("dist/test-manifest.json", "w") as f:
-              json.dump(data, f, indent=2)
+          with open("dist/test-manifest.json", "w", encoding="utf-8") as stream:
+              json.dump(manifest, stream, indent=2)
           PY
-      - uses: actions/upload-artifact@v4
+
+      - name: Upload TEST deployment execution record
+        uses: actions/upload-artifact@v4
         with:
-          name: test-manifest-${{ github.run_id }}
+          name: test-deployment-manifest-${{ github.run_id }}
           path: dist/test-manifest.json
+          if-no-files-found: error
