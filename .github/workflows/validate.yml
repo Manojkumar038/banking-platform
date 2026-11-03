@@ -1,0 +1,27 @@
+name: Validate repository fixtures
+
+on:
+  push:
+    branches: [main, "feature/**", "story/**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required project files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s README.md
+          test -s docs/metric-definitions.md
+          test -s docs/data-provenance.md
+          test -s database/schema.sql
+          echo "Repository fixture validation passed."
