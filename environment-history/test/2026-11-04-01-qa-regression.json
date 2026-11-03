@@ -1,0 +1,10 @@
+{
+  "record_type": "github_actions_trigger_marker",
+  "environment": "TEST",
+  "description": "TEST QA regression validation triggered",
+  "trigger_reason": "Run the TEST promotion workflow and validate the synthetic dataset before release-candidate checks",
+  "source_branch": "promotion/test",
+  "deployment_executed": false,
+  "data_source": "actual_github_trigger_metadata",
+  "created_for_workflow_history": true
+}
