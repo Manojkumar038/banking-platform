@@ -1,6 +1,8 @@
 name: Deploy to TEST
 
 on:
+  push:
+    branches: [promotion/test]
   workflow_dispatch:
 
 permissions:
@@ -12,49 +14,36 @@ concurrency:
 
 jobs:
   deploy:
-    name: TEST deployment pipeline (manual, metadata-only)
-    if: github.ref == 'refs/heads/main'
+    name: TEST promotion pipeline (metadata-only)
+    if: github.ref == 'refs/heads/promotion/test' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: TEST
       url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Validate repository engineering fixtures
+      - name: Validate engineering dataset
         run: python engineering-data/load_dataset.py
-
-      - name: Create deployment manifest
-        env:
-          TARGET_ENVIRONMENT: TEST
+      - name: Record TEST workflow manifest
         run: |
           mkdir -p dist
           python - <<'PY'
           import json, os
-          manifest = {
-              "environment": os.environ["TARGET_ENVIRONMENT"],
-              "source_ref": os.environ["GITHUB_REF"],
+          data = {
+              "environment": "TEST",
               "source_sha": os.environ["GITHUB_SHA"],
               "workflow_run_id": os.environ["GITHUB_RUN_ID"],
-              "workflow_run_url": f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
-              "deployment_mode": "github-environment-record-only",
               "application_runtime_deployed": False,
-              "runtime_target": None,
-              "note": "No hosting or AWS EKS target is configured yet. This run validates fixtures and records the GitHub Environment workflow execution only."
+              "deployment_mode": "metadata-only",
+              "runtime_target": None
           }
-          with open("dist/deployment-manifest.json", "w", encoding="utf-8") as stream:
-              json.dump(manifest, stream, indent=2)
+          with open("dist/test-manifest.json", "w") as f:
+              json.dump(data, f, indent=2)
           PY
-
-      - name: Upload deployment manifest
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: test-deployment-manifest-${{ github.run_id }}
-          path: dist/deployment-manifest.json
-          if-no-files-found: error
+          name: test-manifest-${{ github.run_id }}
+          path: dist/test-manifest.json
