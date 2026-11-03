@@ -16,7 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate required project files
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate repository structure
         shell: bash
         run: |
           set -euo pipefail
@@ -24,4 +29,6 @@ jobs:
           test -s docs/metric-definitions.md
           test -s docs/data-provenance.md
           test -s database/schema.sql
-          echo "Repository fixture validation passed."
+
+      - name: Validate synthetic engineering dataset
+        run: python engineering-data/load_dataset.py
