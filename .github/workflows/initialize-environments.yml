@@ -1,0 +1,40 @@
+name: Initialize GitHub Environments
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  initialize-dev:
+    name: Initialize DEV environment
+    runs-on: ubuntu-latest
+    environment:
+      name: DEV
+      deployment: false
+    steps:
+      - name: Confirm environment registration
+        run: echo "DEV environment is registered. No application deployment was performed."
+
+  initialize-test:
+    name: Initialize TEST environment
+    runs-on: ubuntu-latest
+    environment:
+      name: TEST
+      deployment: false
+    steps:
+      - name: Confirm environment registration
+        run: echo "TEST environment is registered. No application deployment was performed."
+
+  initialize-prod:
+    name: Initialize PROD environment
+    runs-on: ubuntu-latest
+    environment:
+      name: PROD
+      deployment: false
+    steps:
+      - name: Confirm environment registration
+        run: echo "PROD environment is registered. No application deployment was performed."
